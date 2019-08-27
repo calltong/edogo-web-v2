@@ -1,0 +1,63 @@
+.ant-upload.ant-upload-select-picture-card {
+  width: 100%;
+}
+
+.ant-form-item-label {
+  line-height: 25px;
+}
+
+.my-editor {
+  min-height: 400px;
+  max-height: 600px;
+  border: 1px solid #DAD9D9;
+  line-height: 15px;
+}
+
+.select-readonly > .ant-select-selection {
+  color: black;
+  background-color: #DADAD9;
+}
+
+.picker-readonly > div > .ant-input-disabled {
+  color: black;
+  background-color: #DADAD9;
+}
+
+.markdown-readonly {
+  color: black;
+  background-color: #DADAD9;
+}
+
+.progress > .ant-modal {
+  top: 150px;
+}
+
+.progress > .ant-modal > .ant-modal-content {
+  background-color: transparent;
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.15);
+}
+
+.ant-progress-circle .ant-progress-text {
+  color: white;
+}
+
+.ant-switch-checked {
+  background-color: rgb(88, 168, 84);
+}
+
+.ant-switch {
+  height: 25px;
+}
+
+.ant-switch::after {
+  width: 21px;
+  height: 21px;
+}
+
+.ant-tabs-bar {
+  margin: 0px;
+}
+
+.ant-form-item {
+  margin-bottom: 0px;
+}
