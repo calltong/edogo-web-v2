@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Dropdown, Menu, Row, Col } from 'antd'
+import styled from 'styled-components'
 
 export default class LineMenu extends Component {
   state = {
@@ -29,15 +30,15 @@ export default class LineMenu extends Component {
       paddingLeft: '8px',
     }
 
-    let menus = size_list.map((item, index) => {
+    let items = size_list.map((item, index) => {
       let cssLine = { borderTop: `${item.label + 2}px solid black` }
       return (
         <Menu.Item key={index}>
 
           <Row onClick={this.onChange.bind(this, item)}>
             <Col span={4} style={col}>{item.label}</Col>
-            <Col span={18} style={col}>
-              <hr className="whiteboard-menu-line-item" style={cssLine} />
+            <Col span={20} style={col}>
+              <hr style={cssLine} />
             </Col>
           </Row>
 
@@ -45,17 +46,31 @@ export default class LineMenu extends Component {
       )
     })
 
+    let menu = (
+      <Menu style={{width: '120px'}}>
+        {items}
+      </Menu>
+    )
     return (
-      <Dropdown overlay={menus} trigger={['click']}>
+      <Dropdown overlay={menu} trigger={['click']}>
         <a className="ant-dropdown-link" href="#" >
-          <label className="whiteboard-menu-line-btn">
+          <LabelIcon>
             {selected.label}
-          </label>
+          </LabelIcon>
         </a>
       </Dropdown>
     )
   }
 }
+
+const LabelIcon = styled.label`
+  padding: 0px 5px;
+  margin: 0px 5px;
+  border-color: white;
+  text-align: center;
+  border-radius: 4px;
+  border: 1px solid #585859;
+`
 
 const size_list = [
   {

@@ -181,7 +181,9 @@ export class Whiteboard extends Component {
         this.isDown = true
         break
       case MethodType.line.drawing:
-        for (let point of data.list) this.line.list.push(point)
+        for (const p of data.list) {
+          this.line.list.push(p)
+        }
         this.writeLine({ data })
         break
       case MethodType.line.end:

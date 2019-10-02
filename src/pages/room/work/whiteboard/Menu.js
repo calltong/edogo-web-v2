@@ -77,7 +77,8 @@ export default class BoardMenu extends Component {
     return (
       <Section>
         {tool_choose}
-
+        <LineMenu />
+        <ColorMenu />
         <LabelIcon>
           <i className="far fa-image" />
           <input
